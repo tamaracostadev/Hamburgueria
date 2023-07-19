@@ -1,0 +1,248 @@
+/* basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  background: #333;
+  background-image: url("../img/1.png");
+  min-height: 100svh;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@font-face {
+    font-family: 'Holiday';
+    src: url('../fonts/Holiday New Style.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+main{
+    max-width: 700px;
+    height: 100dvh;
+    margin: 0 auto;
+    overflow-x: hidden;
+    
+    
+}
+
+.mt-6{
+    margin-top: 3rem;
+}
+.mt-3{
+    margin-top: 1rem;
+}
+
+.absolute{
+    position: absolute;
+    &.top{
+        top: 1rem;
+    }
+    &.bottom{
+        bottom: 0;
+    }
+    z-index: -1;
+}
+
+img.absolute{
+    left: 50%;
+    transform: translate(-50%,0);
+    max-width: 100%;
+    text-align: center;
+    width: 500px;
+    object-fit: cover;
+}
+
+
+
+.anton{
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3rem;
+
+    .big-red{
+        color: #FF1616;
+        font-size: 3.3rem;
+    }
+
+    .button{
+        font-size: 1.5rem;
+    }
+}
+
+.button{
+    display: inline-block;
+    padding: 0rem 1rem;
+    width: 300px;
+    max-width: 80%;
+    margin: 0.3rem auto;
+    background: #D2802A;
+    border-radius: 2rem;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        background: #fff;
+        color: #D2802A;
+    }
+}
+
+.contact{
+    position:absolute;
+    bottom:0.8rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 0rem 1rem;
+    letter-spacing: 0.1rem;
+    margin-top: 1rem;
+    color: #fff;
+    background-color: #1D7B0F;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        background: #fff;
+        color: #1D7B0F;
+    }
+}
+
+.holiday{
+    font-family: 'Holiday', sans-serif;
+    text-align: center;
+    color: #D79A33;
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+    z-index: 2;
+    &.eco{
+        color: #000;
+        position:absolute;
+        left: 50%;
+        top: 130%;
+        transform: translate(-50%, -50%);
+        font-size: 10rem;
+        letter-spacing: 0.15rem;
+        margin-top: -0.8rem;
+
+        /* boder #D79A33 */
+        -webkit-text-stroke: 2px #d79b3357;
+        -webkit-text-fill-color: transparent;
+        z-index: -1 !important;
+    }
+}
+
+section{
+    margin-top: 2rem;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+.relative{
+    position: relative;
+}
+
+.big{
+    font-size: 3.7rem;
+}
+
+.item{
+    font-family: 'Open Sans', sans-serif;
+    margin: 1rem auto 0;
+    padding: 0 5%;
+    width: 100%;
+    max-width: 500px;
+    justify-content: space-between;
+   
+    p{
+        /* dont break line */
+        white-space: nowrap;
+        font-weight: 600;
+    }
+    .line{
+        /* dotted line */
+        width: 100%;
+        margin: 0 8px;
+        border-bottom: 2px dashed #ffffffab;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .big{
+        font-size: 3.7rem;
+        margin-bottom: -0.5rem;
+    }
+    .anton{
+        font-size: 2.3rem;
+        line-height: 2.4rem;
+        .big-red{
+            font-size: 2.5rem;
+        }
+    
+        .button{
+            font-size: 1.2rem;
+            font-weight: 400 !important;
+        }
+    }
+
+    .holiday{
+        font-size: 5rem;
+        line-height: rem;
+        letter-spacing: 0.1rem;
+
+        &.eco{
+            font-size: 6.5rem;
+            letter-spacing: 0.15rem;
+            margin-top: -0.8rem;
+        }
+    }
+}
+
+
+
